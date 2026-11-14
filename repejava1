@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class R1 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Ingrese el primer numero: ");
+        int a = entrada.nextInt();
+
+        System.out.print("Ingrese el segundo numero: ");
+        int b = entrada.nextInt();
+
+        while (b != 0) {
+            int residuo = a % b;
+            a = b;
+            b = residuo;
+        }
+
+        System.out.println("El MCD es: " + a);
+
+        entrada.close();
+    }
+}
